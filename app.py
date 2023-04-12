@@ -20,22 +20,6 @@ app2 = customtkinter.CTk()
 app2.geometry("250x720")
 app2.title("Temp")
 
-
-#  endereço sql para fazer conexão com banco
-# mydb = mysql.connector.connect(
-#     host="177.47.183.75",
-#     user="tech_consulta",
-#     password="~pt780w3L",
-#     database="icetran_oraculo"
-# )
-
-#  SELECT para puxar as variáveis
-# myCursor = mydb.cursor()
-# idusuario = '100'
-# myCursor.execute("SELECT nome, senha, idcidade FROM usuarios_adm WHERE idusuario = {}".format(idusuario))
-# myresults = myCursor.fetchall()
-
-
 def button_callback():
     def formatcpf(cpf):
         vezes = 0
@@ -255,18 +239,6 @@ def button_callback():
         progressbar_1.set(1)
     os.remove('result.docx')
 
-
-# def button_callback2():
-#
-#     global switch_value
-#     if switch_value:
-#         customtkinter.set_appearance_mode("Light")
-#         switch_value = False
-#     else:
-#         customtkinter.set_appearance_mode("dark")
-#         switch_value = True
-
-
 frame_1 = customtkinter.CTkFrame(master=app)
 frame_1.pack(pady=20, padx=60, fill="both", expand=True)
 
@@ -302,10 +274,6 @@ entry_EMAIL.pack(pady=10, padx=10)
 
 button_1 = customtkinter.CTkButton(master=frame_1, command=button_callback, text='Gerar Certificado')
 button_1.pack(pady=10, padx=10)
-
-# button_2 = customtkinter.CTkButton(master=frame_1, command=button_callback2, text='Modo', width=10)
-# button_2.pack(pady=10, padx=10)
-# button_2.place(relx=0.03)
 
 progressbar_1 = customtkinter.CTkProgressBar(master=frame_1)
 progressbar_1.pack(pady=10, padx=10)
